@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .emoji {
+      width: 160px;
+      height: 160px;
+      display: inline-block;
+      background: url("images/emoji.png");
+      position: relative;
+    }
+    .emoji-e {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("images/emoji.png");
+      background-position: -640px top;
+      animation: smile 2s steps(1) infinite;
+    }
+    .emoji-m {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("images/emoji.png");
+      background-position: -160px top;
+      animation: blink 2s steps(1) infinite;
+    }
+    @keyframes smile {
+      0% {background-position: -163px top;}
+      20% {background-position: -330px top;}
+      80% {background-position: -490px top;}
+    }
+    @keyframes blink {
+      0% {background-position: -655px top;}
+      40% {background-position: -818px top;}
+      60% {background-position: -982px top;}
+      80% {background-position: -1150px top;}
+    }
+  </style>
+</head>
+<body>
+  <div class="emoji">
+    <div class="emoji-e"></div>
+    <div class="emoji-m"></div>
+  </div>
+</body>
+</html>
